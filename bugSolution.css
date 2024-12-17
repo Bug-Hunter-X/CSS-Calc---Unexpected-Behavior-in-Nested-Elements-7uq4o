@@ -1,0 +1,29 @@
+/* bug.css */
+.parent {
+  width: 300px; /* Missing width declaration causing the issue */
+  background-color: lightblue;
+}
+
+.child {
+  width: calc(100% - 10px);
+  background-color: lightcoral;
+  height: 50px;
+}
+
+/* bugSolution.css */
+.parent {
+  width: 300px; 
+  background-color: lightblue;
+}
+
+.child {
+  width: calc(100% - 10px);
+  background-color: lightcoral;
+  height: 50px; 
+}
+/*or use viewport units*/
+.child2{
+  width:calc(100vw - 10px);
+  background-color: lightgreen;
+  height: 50px;
+}
